@@ -1,0 +1,9 @@
+title = "my config"
+
+host = "localhost:"
+port = "8080"
+
+DbAddr = "localhost:5432"
+DbUser = "postgres"
+DbPassword = "1234"
+DbDatabase = "postgres"

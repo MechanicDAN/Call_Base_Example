@@ -1,0 +1,14 @@
+<body>
+<div class="row">
+  <div class="col-md-2 mb-3">
+    <label for="filter-name">{{'call.filter.user' | translate}}</label>
+    <select class="custom-select d-block w-100" id="filter-name" [(ngModel)]="currentUser" (change)="submit()">
+      <option value="">none</option>
+      <option *ngFor="let user of users" [value]="user.Id" >
+        {{user.Name}}
+      </option>
+    </select>
+  </div>
+</div>
+<app-table [inputColumns]= "columns" [data]="calls" [showId]="false" (change)="submit()" (setSort)="setSort($event)"></app-table>
+</body>

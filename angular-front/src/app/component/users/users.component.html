@@ -1,0 +1,20 @@
+<body>
+<div class="row">
+  <div class="col-md-2 mb-3">
+    <label for="filter-login">{{'users.filter.login' | translate}}</label>
+    <input type="text" class="form-control" id="filter-login" [(ngModel)]="filterLogin" (change)="submit()">
+  </div>
+  <div class="col-md-2 mb-3">
+      <label for="filter-name">{{'users.filter.name' | translate}}</label>
+      <input type="text" class="form-control" id="filter-name" [(ngModel)]="filterName" (change)="submit()">
+  </div>
+  <div class="col-md-2 mb-3">
+    <label for="filter-phone">{{'users.filter.phone' | translate}}</label>
+    <input type="text" class="form-control" id="filter-phone" [(ngModel)]="filterPhone" (change)="submit()">
+  </div>
+</div>
+
+<app-table [inputColumns]= "columns" [data]="users" [showId]="true" (change)="submit()" (setSort)="setSort($event)" (edit)="edit($event)"></app-table>
+
+<button class="btn btn-lg btn-primary" type="submit" (click)="edit(0)">{{'users.new' | translate}}</button>
+</body>

@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th *ngFor="let column of columns">
+      {{column.text | translate}}
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="sort(column)">
+        <fa-icon [icon]="sortBy == column.name && column.type == 'DESC' ? faSortDown : sortBy == column.name && column.type == 'ASC' ? faSortUp : faSort"></fa-icon>
+      </button>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let call of data">
+    <td *ngFor="let column of columns">
+      <div *ngFor="let item of call | keyvalue: keepOrder">
+        <div *ngIf="item.key == column.name">
+          <div [ngSwitch]="column.format">
+            <ng-template ngSwitchCase="id">
+              <button class="btn btn-outline-primary" (click)="editEvent(item.value)">{{ item.value }}</button>
+            </ng-template>
+            <ng-template ngSwitchCase="date">
+              <span>{{ item.value | date :'medium'}}</span>
+            </ng-template>
+            <ng-template ngSwitchCase="time">
+              <span>{{ item.value * 1000 | date :'H:mm:ss':'UTC'}}</span>
+            </ng-template>
+            <ng-template ngSwitchDefault>{{item.value}}</ng-template>
+          </div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

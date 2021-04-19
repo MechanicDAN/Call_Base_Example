@@ -1,0 +1,18 @@
+<body class="text-center">
+<div class="alert alert-warning" role="alert" *ngIf="isVisible">
+  {{'signIn.fail' | translate}}
+</div>
+<div class="sign-in">
+  <div class="input">
+    <label for="inputLogin">
+      <input id="inputLogin" class="form-control" [(ngModel)]="login" placeholder="{{'signIn.login' | translate}}" (change)="closeWarning()">
+    </label>
+    <br>
+    <label for="inputPassword">
+      <input id="inputPassword" type="password" class="form-control" [(ngModel)]="password" placeholder="{{'signIn.pass' | translate}}" (change)="closeWarning()">
+    </label>
+  </div>
+  <br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="submit()">{{'signIn.btn' | translate}}</button>
+</div>
+</body>

@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "hello": "Hello",
+    "main": "Main",
+    "users": "Users",
+    "calls": "Calls",
+    "login": "Sign In"
+  },
+  "footer": {
+    "lang": "Language",
+    "RU": "Russian",
+    "EN": "English"
+  },
+  "main": {
+    "auth" : "You are logged in."
+  },
+  "signIn": {
+    "fail": "Authorization failed.",
+    "login": "Login",
+    "pass": "Password",
+    "btn": "Sign In"
+  },
+  "users": {
+    "filter": {
+      "login": "Filter by login:",
+      "name": "Filter by name:",
+      "phone": "Filter by phone:"
+    },
+    "th": {
+      "id": "Id",
+      "login": "Login",
+      "name": "Name",
+      "phone": "Phone"
+    },
+    "new": "Add new User"
+  },
+  "call": {
+    "filter": {
+      "user": "Filter by user:"
+    },
+    "th": {
+      "id":"Id",
+      "user": "User",
+      "from": "From",
+      "to": "To",
+      "startTimestamp": "Start time",
+      "endTimestamp": "End time",
+      "duration": "Duration"
+    }
+  },
+  "editUser": {
+    "fail": "Valid field is required.",
+    "input": {
+      "name": "Name",
+      "login": "Login",
+      "phone": "Phone",
+      "language": "Language"
+    },
+    "save": "Save"
+  }
+}

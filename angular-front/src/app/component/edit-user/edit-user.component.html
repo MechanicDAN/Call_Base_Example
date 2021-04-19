@@ -1,0 +1,31 @@
+<div class="alert alert-warning" role="alert" *ngIf="isVisible">
+  {{'editUser.fail' | translate}}
+</div>
+<div class="col-md-8 order-md-1">
+  <form class="needs-validation" novalidate="" [formGroup]="Form">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="name">{{'editUser.input.name' | translate}}</label>
+        <input type="text" class="form-control" id="name" formControlName="Name">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="login">{{'editUser.input.login' | translate}}</label>
+        <input type="text" class="form-control" id="login" formControlName="Login">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="phone">{{'editUser.input.phone' | translate}}</label>
+        <input type="text" class="form-control" id="phone" formControlName="Phone">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="language">{{'editUser.input.language' | translate}}</label>
+        <select class="custom-select d-block w-100" id="language" formControlName="Language">
+          <option value="en">{{'footer.EN' | translate}}</option>
+          <option value="ru">{{'footer.RU' | translate}}</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="save()">{{'editUser.save' | translate}}</button>
+  </form>
+</div>
